@@ -28,15 +28,24 @@
         <!-- section Home -->
          <section id="section-home">
             <header>
-                <h1>Hi User, Welcome to My Website</h1>
+                <h1>Hi <span id="name">User</span>, Welcome to My Website</h1>
             </header>
 
             <article>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ea?</p>
             </article>
 
-            <!-- Photo Banner -->
-             <div class="photo-banner"></div>
+              <!-- Photo Banner -->
+              <div class="photo-banner" id="photoBanner">
+                <img class="img" id="currentImage" src="assets/image/gambar2.jpg" />
+            </div>
+
+            <div class="button-container">
+                <button onclick="previousImage()">Previous</button>
+                <button onclick="nextImage()">Next</button>
+            </div>
+
+            </section>
 
 
          </section>
@@ -50,7 +59,13 @@
             </header>
 
             <article>
-                <div class="article"></div>
+                <div class="article">
+                    <p>saya rizky maulana</p>
+                    <p>berasal dari jombang</p>
+                    <p>saya seorang mahasiswa</p>
+                    <P>saya sedang menjalani kuliah di bidang kesehatan</P>
+
+                </div>
             </article>
           </section>
           
@@ -63,7 +78,15 @@
             </header>
 
             <article>
-                <div class="article"></div>
+                <div class="article">
+                    <h2><bold>Software Engineer</bold></h2>
+                    <p>Software engineering atau rekayasa perangkat lunak adalah cabang ilmu komputer yang mempelajari bagaimana menerapkan prinsip-prinsip teknik untuk mendesain, mengembangkan, dan memelihara perangkat lunak</p>
+                    <h2><bold>Tugas</bold></h2>
+                    <p>Seorang software engineer bertugas merancang, mengembangkan, memelihara, menguji, dan mengevaluasi perangkat lunak. Mereka juga harus memastikan bahwa perangkat lunak yang dibuat berjalan efisien dan efektif. </p>
+                    <h2><bold>Keterampilan</bold></h2>
+                    <p>Software engineer perlu menguasai berbagai keterampilan, seperti algoritma, struktur data, bahasa pemrograman, tools, komunikasi, konsep bisnis, dan framework. </p>
+
+                </div>
             </article>
 
          </section>
@@ -77,11 +100,45 @@
                 <h1>Massage Us</h1>
             </header>
 
-            <div class="massage-container">
-                <form></form>
+            <div class="form-container">
+                <form id="messageForm">
+                    <div>
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" size="30"  required>
+                    </div>
+                    <div>
+                        <label for="tanggal">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal" name="tanggal"  required>
+                    </div>
+                    <div>
+                        <label>Jenis Kelamin:</label>
+                        <br>
+                        <input type="radio" id="laki" name="gender" value="Laki-Laki" required>
+                        <label for="laki">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+                    <div>
+                        <label for="pesan">Pesan:</label>
+                        <br>
+                        <textarea id="pesan" name="pesan" required cols="35" rows="5" ></textarea>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
 
-                <div></div>
+                <div class="result-container"  id="result">
+                    <p><strong>Current time:</strong> <span id="currentTime"></span></p>
+                    <p><strong>Nama:</strong> <span id="resNama"></span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="resTanggal"></span></p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="resGender"></span></p>
+                    <p><strong>Pesan:</strong> <span id="resPesan"></span></p>
+                </div>
+                
             </div>
+
+            
 
           </section>
     </main>
@@ -93,5 +150,7 @@
     <footer>
         <div>Made By Rizky Maulana</div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
